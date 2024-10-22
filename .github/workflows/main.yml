@@ -20,11 +20,11 @@ jobs:
         
     - name: Restore dependencies
       run: dotnet restore
-      working-directory: src/eshop-microservices.sln
+      working-directory: src/eShop-microservices.sln
 
     - name: Build
       run: dotnet build --configuration Release --no-restore
-      working-directory: src/eshop-microservices.sln
+      working-directory: src/eShop-microservices.sln
 
     - name: Publish app
       run: dotnet publish -c Release -o ./publish
