@@ -17,9 +17,14 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '8.0.x'
+        
+    - name: Restore dependencies
+      run: dotnet restore
+      working-directory: src/eshop-microservices.sln
 
-    - name: Build with dotnet
-      run: dotnet build --configuration Release
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+      working-directory: src/eshop-microservices.sln
 
     - name: Publish app
       run: dotnet publish -c Release -o ./publish
