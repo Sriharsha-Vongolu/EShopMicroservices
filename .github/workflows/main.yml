@@ -15,13 +15,13 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '6.0.x'
+        dotnet-version: '8.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore src/eshop-microservices.sln
+      run: dotnet restore src/eShop-microservices.sln
 
     - name: Build solution
-      run: dotnet build src/eshop-microservices.sln --configuration Release --no-restore
+      run: dotnet build src/eShop-microservices.sln --configuration Release --no-restore
 
     - name: Publish app
       run: dotnet publish -c Release -o ./publish
