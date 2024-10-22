@@ -3,7 +3,7 @@ name: Deploy ASP.NET Core app to Azure
 on:
   push:
     branches:
-      - '*'
+      - '**'
 
 jobs:
   build:
