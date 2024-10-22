@@ -6,6 +6,7 @@
     {
         public void AddRoutes(IEndpointRouteBuilder app)
         {
+            //Added comments 
             app.MapPost("/products",
                 async (CreateProductCommand request, ISender sender) =>
                 {
